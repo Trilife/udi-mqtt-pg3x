@@ -18,49 +18,36 @@ VERSION = '0.40.2'
 DONE README.md clean-up
 DONE POLYGLOT_CONFIG.md clean-up
 0.40.1
-DONE s31 displays in program
+DONE:   S31 debug: displays in program now *** need to know it works
 0.40.0
-DONE change numbering to allow for branch management
-DONE raw fix docs & allow int in addition to str
-DONE find topic by topic if no device_id find
-DONE:discover button updates nodes and MQTT subscriptions
-DONE config.md fixes
-DONE status for switch device available in programs
-DONE internal: improve logging for debug
-
-Current TODO list from forum:
-
-As the title suggests, please add your bugs, suggestions, and improvement thoughts here. 
-I will update this post as ideas make the list and are prioritized.
-
-*** Putting up into Beta under MQTT-poly for the brave to try out and give feedback.
-
 DONE:   Changed versioning so git branches and hot fixes can work.
           so 0.40.0 means it will be on branch 0.40 with the last .0
           reserved for hotfixes.  These will then be pushed by PG3 to users
-DONE:   Switch make Status available in IF for programs
+DONE raw fix docs & allow int in addition to str
+DONE find topic by topic if no device_id find
+DONE discover button updates nodes and MQTT subscriptions
+DONE config.md fixes
+DONE status for switch device available in programs
+DONE internal: improve logging for debug
 DONE:   Parameters are not initially populated, plugin uses the following defaults:
            mqtt_server = LocalHost
            mqtt_port = 1884
            mutt-user = admin (same as None)
            mqtt_password = admin (same as None)
-DONE:   'raw' fix docs and allow to take int type in addition to str
-DONE:   discover button updates nodes and MQTT subscriptions
-DONE:   internal: improve logging for debug
-DONE:   S31 debug: displays in program now *** need to know it works
+DONE:   Switch make Status available in IF for programs
 
-STARTED:CONFIG.MD, changed references of power to POWER. (please feel free to suggest other improvements to the docs)
-At the end of the config file, I had put a sample on the syntax of a devfile for multiple analog inputs. Unfortunately, 'MD' reformatted it and it looks completely different from the yaml sample. It might be useful to add a standard 'switch' sample in that device.yaml and somehow make it look like the sample I sent you some time ago (and also shared with Maxnorth on the forum, I think) 
+Please add your bugs, suggestions, and improvement thoughts in the forum thread 
+I will update this list as ideas come in and are prioritized.
 
 NEXT:   Query is not consistent across the devices
 HELP:   iFan debug: ****need some specifics here of what is happening, logs aways help
-HELP:    Google Assistant is not reporting device status consistently: 
+HELP:   Multiple-Analog clean-up (particular issues?)
+HELP:   Google Assistant is not reporting device status consistently: 
 
 I only access MQSwitch and MQDimmer with Google Assistant (Voice): when initially called on a hub or hub max, the screen shows the status as ON (and % for dimmer). And after a couple of seconds it reverts to OFF and 0%.
 
 When using the Google Home app, you can click a device to turn it on and the GUI shows ON and stays on. But if I independently turn the light off locally, the GUI remains ON, meaning that it doesn't get feedback from the plug-in, or doesn't process it properly. AC does report when a light gets turned off locally.
 
-HELP:   Multiple-Analog clean-up (particular issues?)
 HELP:   Tasmota potential automation opportunities in discovery
 
 LATER:  simplify devlist/devfile by using 'defaults' for status_topic and cmd_topic. (They are mostly a combination of 'id' and a set of repetitive strings). This could reduce configuration pain by 80% and typos by 90%. Minimum need: 'id:' and 'type:' optional 'name:'
